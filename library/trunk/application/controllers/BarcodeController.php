@@ -20,29 +20,6 @@ class BarcodeController extends Libz_Base_BaseController {
 	 */
 	public function accessnoAction() {
 		$this->_helper->viewRenderer->setNoRender ( false );
-		/*
-		 ** The code was used for basic HTML but now ajax requests are being performed. **
-		 * $request = $this->getRequest ();
-		$accFrom = trim($request->getParam ( 'accFrom' ));
-		$accUpto = trim($request->getParam ( 'accUpto', null ));
-		if (isset ( $accFrom ) and ((string)$accFrom === (string)(int)$accFrom)) {
-			
-			$this->view->assign ( 'accFrom', $accFrom );
-			$printAcc = null;
-			
-			if (((string)$accUpto === (string)(int)$accUpto) and ($accUpto >= $accFrom)) {
-				for($acc_no = $accFrom; $acc_no <= $accUpto; $acc_no ++) {
-					$printAcc [] = ( int ) $acc_no;
-				}
-			$this->view->assign ( 'accUpto', $accUpto );
-			} else {
-				$this->_helper->logger('accUpto is invalid or not set');
-				$printAcc = ( int ) $accFrom;
-			}
-			$this->view->assign ( 'printAcc', $printAcc );
-		} else {
-			$this->_helper->logger('unacceptable accFrom');
-		}*/
 	}
 
 
